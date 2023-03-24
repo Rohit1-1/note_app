@@ -16,7 +16,7 @@ const authenticate=(req,res,next)=>{
       
        
     } catch (error) {
-        res.status(500).send({"msg":"something went wrong"})
+        res.status(500).send({"msg":"something went wrong or missing token",})
     }
    
 }

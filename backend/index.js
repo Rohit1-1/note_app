@@ -3,6 +3,7 @@ const cors=require("cors");
 const {connection}=require('./config/db')
 const {signupRouter}=require('./router/signup_router')
 const {loginRouter}=require('./router/login_router')
+const {notesRouter}=require("./router/notes_router")
 const app=express();
 
 
@@ -10,6 +11,7 @@ app.use(cors())
 app.use(express.json());
 app.use("/signup",signupRouter)
 app.use("/login",loginRouter)
+app.use("/notes",notesRouter)
 
 
 app.get('/',(req,res)=>{
