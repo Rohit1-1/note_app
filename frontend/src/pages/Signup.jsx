@@ -77,7 +77,7 @@ const SignUp = () => {
           isClosable: true,
         });
       });
-    console.log(userdata);
+    //console.log(userdata);
   };
 
   return (

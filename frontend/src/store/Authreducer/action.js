@@ -31,7 +31,7 @@ export const signup = (payload) => (dispatch) => {
         dispatch(signup_failure());
       });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -59,14 +59,14 @@ export const signin = (payload) => (dispatch) => {
     return axios
       .post(`${url}/login`, payload)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         dispatch({ type: SIGNIN_SUCCESS, payload: res.data });
         return res.data;
       })
       .catch((err) => {
         if (err.response.status === 401) {
           dispatch(wrongCred());
-          console.log(err);
+          // console.log(err);
           return err.response.data;
         }
       });

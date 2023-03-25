@@ -11,7 +11,6 @@ const Notes = () => {
     useEffect(()=>{
    dispatch(getNotes())
     },[dispatch])
-    console.log(getIsLoading)
   return (
     <>
       <Addnote/>

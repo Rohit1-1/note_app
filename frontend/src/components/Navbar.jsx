@@ -20,7 +20,7 @@ const Navbar = () => {
   const handleLogout = () => {
     dispatch(logout());
   };
-  console.log("helo navbar", isAuth);
+  
   return (
     <Flex
       padding={{ base: "1.5rem 2rem", md: "1.5rem 8rem", lg: "1.5rem 8rem" }}
@@ -34,17 +34,17 @@ const Navbar = () => {
         Notes App
       </Heading>
       <Flex alignItems={"center"} gap={6}>
-      <NavLink
+        <NavLink
           to="/"
-            style={({ isActive, isPending }) => {
-              return {
-                fontWeight: isActive ? "600" : "600" ,
-                color: isActive  ? "red" : "black",
-              };
-            }}
-          >
-            Notes
-          </NavLink>
+          style={({ isActive, isPending }) => {
+            return {
+              fontWeight: isActive ? "600" : "600",
+              color: isActive ? "red" : "black",
+            };
+          }}
+        >
+          Notes
+        </NavLink>
 
         {isAuth ? (
           <Menu>
@@ -68,11 +68,11 @@ const Navbar = () => {
           </Menu>
         ) : (
           <NavLink
-          to="/signin"
+            to="/signin"
             style={({ isActive, isPending }) => {
               return {
-                fontWeight: isActive ? "600" : "600" ,
-                color: isActive  ? "red" : "black",
+                fontWeight: isActive ? "600" : "600",
+                color: isActive ? "red" : "black",
               };
             }}
           >

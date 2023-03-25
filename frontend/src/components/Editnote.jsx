@@ -70,11 +70,15 @@ const Editnote = ({ id, title, description }) => {
           isClosable: true,
         });
       });
-    console.log(notedata);
+    //console.log(notedata);
   };
   return (
     <>
-      <EditIcon color={'blue.600'} _hover={{ cursor: "pointer" }} onClick={onOpen}/>
+      <EditIcon
+        color={"blue.600"}
+        _hover={{ cursor: "pointer" }}
+        onClick={onOpen}
+      />
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
