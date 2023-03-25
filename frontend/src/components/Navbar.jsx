@@ -34,7 +34,17 @@ const Navbar = () => {
         Notes App
       </Heading>
       <Flex alignItems={"center"} gap={6}>
-        <Text fontWeight={600}>Notes</Text>
+      <NavLink
+          to="/"
+            style={({ isActive, isPending }) => {
+              return {
+                fontWeight: isActive ? "600" : "600" ,
+                color: isActive  ? "red" : "black",
+              };
+            }}
+          >
+            Notes
+          </NavLink>
 
         {isAuth ? (
           <Menu>
