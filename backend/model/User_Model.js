@@ -6,6 +6,6 @@ const userSchema=mongoose.Schema({
     password:String,
 })
 
-const User_Model=mongoose.model('user',userSchema)
+const User_Model=mongoose.model('noteuser',userSchema)
 
 module.exports={User_Model}
